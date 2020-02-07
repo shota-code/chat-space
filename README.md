@@ -28,7 +28,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false|
-|user_name|string|null: false, unique: true|
+|name|string|null: false, unique: true, index: true|
 |email|string|null: false, unique: true|
 |password|string|null: false, unique: true|
 
@@ -41,8 +41,8 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|not: null, foreign_key: true|
-|group_id|integer|not: null, foreign_key: true|
+|user_id|references|not: null, foreign_key: true|
+|group_id|references|not: null, foreign_key: true|
 |image|string|
 |body|text|
 
@@ -66,8 +66,8 @@ has_many :groups
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
