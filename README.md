@@ -35,18 +35,20 @@ Things you may want to cover:
 ### Association
 - has_many :massages
 - has_many :groups, through: :users_groups
+- has_many :users_groups
 
 ## massagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|foreign_key: true|
-|groups_id|integer|foreign_key: true|
+|user_id|integer|not: null, foreign_key: true|
+|groups_id|integer|not: null, foreign_key: true|
 |image|string|
-|body|text|null: false|
+|body|text|
 
 ### Association
 - belong_to :user
+- belong_to :group
 
 ## groupsテーブル
 
@@ -57,6 +59,8 @@ Things you may want to cover:
 
 ### Association
 has_many :users, through: :uesrs_groups
+has_many :users_groups
+has_many :groups
 
 ## groups_usersテーブル
 
