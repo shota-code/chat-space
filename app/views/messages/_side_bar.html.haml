@@ -4,7 +4,7 @@
       .side-bar__user-name__top-items__name
         = current_user.name
       .side-bar__user-name__top-items__icons
-        = link_to '#', class: 'side-bar__user-name__top-items__icons__new-group' do
+        = link_to new_group_path, class: 'side-bar__user-name__top-items__icons__new-group' do
           = icon('fas', 'edit')
         = link_to edit_user_path(current_user), class: 'side-bar__user-name__top-items__icons__edit-user' do
           = icon('fas', 'cog')
@@ -12,7 +12,11 @@
     .side-bar__group-list__items
       .side-bar__group-list__items__up-box
         .side-bar__group-list__items__up-box__group-name
-          techcamp
+          - current_user.groups.each do |group|
+            .group
+              = link_to '#' do
+                .group__name
+                  = group.name
       .side-bar__group-list__items__down-box
         .side-bar__group-list__items__down-box__messages
-          まだメッセージがありません
+          まだメッセージがありません 
