@@ -20,4 +20,4 @@
         = f.label :image, class: 'chat-main__message-form__input__icon', for: "message-image" do
           = icon('fas', 'image')
           = f.file_field :image, id: "message-image", class:'chat-main__message-form__input__icon__image'
-      = f.submit 'Send', class: 'chat-main__message-form__send'
+      = f.submit 'Send', "data-disable-with": "送信中...", class: 'chat-main__message-form__send'

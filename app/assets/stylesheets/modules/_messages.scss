@@ -111,7 +111,8 @@
   }
   &__message-list{
     background-color: #fafafa;
-    height: calc(100vh - 100px - 90px);
+    height: calc(100% - 100px - 90px);
+    overflow: scroll;
     &__block{
       width: 405px;
       padding-left: 40px;
@@ -148,7 +149,8 @@
     padding: 20px 40px;
     background-color: #d2d2d2;
     display: flex;
-
+    // position: fixed;
+    // margin-bottom: 0px;
     &__input{
       position: relative;
       width: 100%;
