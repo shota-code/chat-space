@@ -46,9 +46,13 @@
       &__up-box{
         height: 40px;
         &__group-name{
-          color: #ffffff;
-          font-size: 15px;
-          padding: 20px 20px 5px 20px;
+          .group{
+            &__name{
+              color: #ffffff;
+              font-size: 15px;
+              padding: 20px 20px 5px 20px;
+            }
+          }
         }
       }
       &__down-box{

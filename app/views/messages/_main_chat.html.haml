@@ -10,7 +10,7 @@
             = users.name
     .chat-main__group-info__right-box
       .chat-main__group-info__right-box__edit
-        = link_to 'Edit', edit_group_path(current_user)
+        = link_to 'Edit', edit_group_path(@group.id)
   .chat-main__message-list
     = render partial: 'message', collection: @messages
   .chat-main__message-form 
